@@ -21,7 +21,7 @@ Parameters:
     Type: String
     Description: Name of the image to use for the instance to be created
     Default: 'NeCTAR Ubuntu 14.04 (Trusty) amd64'
-    AllowedValues: ['NeCTAR Ubuntu 13.10 (Saucy) amd64', 'NeCTAR Ubuntu 14.04 (Trusty) amd64']
+    AllowedValues: ['NeCTAR Ubuntu 13.10 (Saucy) amd64', 'NeCTAR Ubuntu 14.04 (Trusty) amd64', 'NeCTAR Ubuntu 18.10 (Cosmic) amd64']
 
 
 Mappings:
