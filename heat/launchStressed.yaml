@@ -21,7 +21,7 @@ Parameters:
     Type: String
     Description: Name of the image to use for the instance to be created
     Default: 'NeCTAR Ubuntu 14.04 (Trusty) amd64'
-    AllowedValues: ['NeCTAR Ubuntu 13.10 (Saucy) amd64', 'NeCTAR Ubuntu 14.04 (Trusty) amd64', 'NeCTAR Ubuntu 18.10 (Cosmic) amd64']
+    AllowedValues: ['NeCTAR Ubuntu 13.10 (Saucy) amd64', 'NeCTAR Ubuntu 14.04 (Trusty) amd64']
 
 
 Mappings:
@@ -68,7 +68,7 @@ Resources:
       SecurityGroups: [{Ref: AlertsSecurityGroup}]
       UserData: |
         #!/bin/bash -v
-        apt-get update && sudo apt-get -y upgrade
+        apt-get update && apt-get -y upgrade
 
         apt-get -y install git
 
@@ -76,6 +76,7 @@ Resources:
         apt-get -y install maven
 
         # then java 8
+        # following not available on later ubuntu builds...
         apt-get -y install python-software-properties
 
         add-apt-repository ppa:webupd8team/java -y
